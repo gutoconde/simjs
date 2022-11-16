@@ -1,0 +1,19 @@
+{
+  "name": "simjs",
+  "version": "1.0.0",
+  "description": "Servicos do Simulador de Verba de Gabinete",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js local",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gutoconde@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1255.0",
+    "axios": "^1.1.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "serverless-http": "^3.1.0"
+  }
+}
