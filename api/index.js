@@ -5,7 +5,7 @@ var app = express();
 var dbMiddleWare = require('./integracao/DatabaseMiddleware');
 var db = require("./integracao/Database.js")
 
-const port = process.env.VERBOS_API_PORT || 3000;
+const port = process.env.SIM_API_PORT || 3000;
 
 app.use(dbMiddleWare(db));
 app.use(express.json());
