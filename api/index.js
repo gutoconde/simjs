@@ -22,3 +22,6 @@ if(process.argv[2] && process.argv[2] === 'local') {
 } else {
     module.exports.handler = serverless(app);
 }
+
+var tasks = require('./administracao/TarefasAgendadas');
+tasks(db);
