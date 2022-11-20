@@ -1,0 +1,23 @@
+#Arquivo servless para implantacao do servico
+#lambda na AWS
+#
+#Antes de executar, defina as variaveis de ambiente
+#AWS_ACCESS_KEY_ID e AWS_SECRET_ACCESS_KEY
+#Execute o comando a partir do diretorio verbos/api:
+#> sls deploy
+service: sim-api
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: prod
+  region: sa-east-1
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
