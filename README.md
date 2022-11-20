@@ -2,7 +2,7 @@
 
 ## Informações Gerais
 
-SIM API é uma biblioteca com serviço de consulta para atender o aplicativo SIM - Simulador de Verba de Gabinete.
+SIM API é uma biblioteca com serviços de consulta para atender o aplicativo SIM - Simulador de Verba de Gabinete.
 
 Ele utiliza informações coletadas a partir dos Dados Abertos da Câmara dos Deputados.
 
