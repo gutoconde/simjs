@@ -20,4 +20,4 @@ functions:
     handler: index.handler
     events:
       - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http: 'ANY /{proxy+}'
