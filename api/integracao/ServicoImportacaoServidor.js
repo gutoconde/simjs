@@ -16,7 +16,6 @@ class ServicoImportacaoServidor {
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 var desc = await this.repositorioServidor.describe('servidor');
                 status = desc.Table.TableStatus;
-                console.log(status);
             } while(status === 'DELETING' || status === 'ACtiVE');
             console.log( result + ' registros Excluidos');
         } catch (error) {
@@ -34,7 +33,6 @@ class ServicoImportacaoServidor {
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 var desc = await this.repositorioServidor.describe('servidor');
                 status = desc.Table.TableStatus;
-                console.log(status);
             } catch(error) {
                 if(error.name === "ResourceNotFoundException") {
                     console.log('Tabela servidor não encontrada.');

@@ -16,7 +16,6 @@ class ServicoImportacaoGabinete {
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 var desc = await this.repositorioGabinete.describe('gabinete');
                 status = desc.Table.TableStatus;
-                console.log(status);
             } while(status === 'DELETING' || status === 'ACtiVE');
             console.log( result + ' registros Excluidos');
         } catch (error) {
@@ -34,7 +33,6 @@ class ServicoImportacaoGabinete {
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 var desc = await this.repositorioGabinete.describe('gabinete');
                 status = desc.Table.TableStatus;
-                console.log(status);
             } catch(error) {
                 if(error.name === "ResourceNotFoundException") {
                     console.log('Tabela não encontrada.');
@@ -47,7 +45,6 @@ class ServicoImportacaoGabinete {
         var gabinetes = await this.listarGabinetes();
         var count = await this.repositorioGabinete.batchInsert(gabinetes);
         console.log(gabinetes.length + ' gabinetes consultados e ' + count + ' gabinetes inseridos.')
-
     }
 
     async listarGabinetes() {
