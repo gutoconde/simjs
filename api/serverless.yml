@@ -25,3 +25,4 @@ functions:
     handler: importardados.execute
     events:
       - schedule: cron(20 22 * * * *)
+      
