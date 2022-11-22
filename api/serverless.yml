@@ -24,4 +24,4 @@ functions:
   importarDados:
     handler: importardados.execute
     events:
-      - schedule: cron(20 25 * * * *)
+      - schedule: cron(20 40 * * * *)
