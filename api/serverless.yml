@@ -25,4 +25,4 @@ functions:
     handler: importardados.execute
     timeout: 900
     events:
-      - schedule: cron(0/10 * * * ? *)
+      - schedule: cron(40 10 * * ? *)
