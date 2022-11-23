@@ -23,6 +23,6 @@ functions:
       - http: 'ANY /{proxy+}'
   importarDados:
     handler: importardados.execute
-    timeout: 980
+    timeout: 900
     events:
       - schedule: cron(0/10 * * * ? *)
